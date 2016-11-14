@@ -53,6 +53,8 @@ bool System::help = false;
 
 int System::frequency = 667;
 
+int dram-access-count = 10000;
+
 
 //
 // Static variables
@@ -237,6 +239,10 @@ void System::RegisterOptions()
 
 	// FIXME add an option to set the access count
 	// --dram-access-count
+	// Stand-alone simulator
+	command_line->RegisterInt32("--dram-access-count",
+			dram-access-count,
+			"YOUR MESSAGE HERE");
 
 	// FIXME add an option to set the injection rate
 	// --dram-injection-rate
